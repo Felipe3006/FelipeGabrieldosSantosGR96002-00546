@@ -43,7 +43,7 @@ public class Produto {
 
     @Override
     public String toString() {
-        return "O produto " + nome + " custa: " + preco;
+        return "O produto " + nome + " custa: " + preco + " e sua validade é: " + DataValidade.toString();
     }
 
     public boolean estaVencido(Data dataRecebida){
