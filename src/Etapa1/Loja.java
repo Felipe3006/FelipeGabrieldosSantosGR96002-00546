@@ -57,4 +57,11 @@ public class Loja {
         } else
             return 'G';
     }
+
+    @Override
+    public String toString() {
+        return "Nome: " + nome +
+                "\nQuantidade de Funcionários: " + quantidadeFuncionario +
+                "\nSalário Base dos Funcionários: " + salarioBaseFuncionario;
+    }
 }

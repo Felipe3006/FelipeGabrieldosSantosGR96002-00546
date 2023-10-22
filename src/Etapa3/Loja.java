@@ -7,7 +7,8 @@ public class Loja {
     private Endereco endereco;
     private Data DataFundacao;
 
-    public Loja(String nome, int quantidadeFuncionario, double salarioBaseFuncionario, Endereco endereco, Data dataDeFundacao) {
+    public Loja(String nome, int quantidadeFuncionario, double salarioBaseFuncionario, Endereco endereco,
+            Data dataDeFundacao) {
         this.nome = nome;
         this.quantidadeFuncionario = quantidadeFuncionario;
         this.salarioBaseFuncionario = salarioBaseFuncionario;
@@ -15,7 +16,7 @@ public class Loja {
         this.DataFundacao = dataDeFundacao;
     }
 
-    public Loja(String nome, int quantidadeFuncionario,Endereco endereco, Data dataDeFundacao) {
+    public Loja(String nome, int quantidadeFuncionario, Endereco endereco, Data dataDeFundacao) {
         this.nome = nome;
         this.quantidadeFuncionario = quantidadeFuncionario;
         this.salarioBaseFuncionario = -1;
@@ -78,5 +79,21 @@ public class Loja {
             return 'M';
         } else
             return 'G';
+    }
+
+    @Override
+    public String toString() {
+        return "Nome: " + nome +
+                "\nQuantidade de Funcionários: " + quantidadeFuncionario +
+                "\nSalário Base dos Funcionários: " + salarioBaseFuncionario + 
+                "\nEndereço da loja" + 
+                "\nRua: " + endereco.getNomeDaRua() + 
+                "\nCidade: " + endereco.getCidade() + 
+                "\nEstado: " + endereco.getEstado() +
+                "\nPaís: " + endereco.getPais() + 
+                "\nCEP: " + endereco.getCep() + 
+                "\nNúmero: " + endereco.getNumero() +
+                "\nComplemento: " + endereco.getComplemento() + 
+                "\nData de fundaçao: " + DataFundacao.toString();
     }
 }
