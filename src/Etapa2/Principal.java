@@ -2,7 +2,7 @@ package Etapa2;
 
 import Teclado.Teclado;
 
-public class Validador {
+public class Principal {
     public static void main(String[] args) throws Exception {
         var Loop = true;
         while (Loop == true) {
