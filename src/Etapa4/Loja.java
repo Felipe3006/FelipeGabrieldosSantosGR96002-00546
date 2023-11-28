@@ -127,7 +127,7 @@ public class Loja {
     }
 
     @Override
-    public String toString() {
+    /*public String toString() {
         return "Nome: " + nome +
                 "\nQuantidade de Funcionários: " + quantidadeFuncionario +
                 "\nSalário Base dos Funcionários: " + salarioBaseFuncionario +
@@ -140,6 +140,34 @@ public class Loja {
                 "\nNúmero: " + endereco.getNumero() +
                 "\nComplemento: " + endereco.getComplemento() +
                 "\nData de fundaçao: " + DataFundacao.toString() +
-                "\nProdutos: " + estoqueProdutos.toString();
+                "\nProdutos: " + estoqueProdutos.toString()+"\n";
+    }*/
+
+      public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Nome: ").append(nome)
+          .append("\nQuantidade de Funcionários: ").append(quantidadeFuncionario)
+          .append("\nSalário Base dos Funcionários: ").append(salarioBaseFuncionario)
+          .append("\nEndereço da loja\n")
+          .append("Rua: ").append(endereco.getNomeDaRua())
+          .append("\nCidade: ").append(endereco.getCidade())
+          .append("\nEstado: ").append(endereco.getEstado())
+          .append("\nPaís: ").append(endereco.getPais())
+          .append("\nCEP: ").append(endereco.getCep())
+          .append("\nNúmero: ").append(endereco.getNumero())
+          .append("\nComplemento: ").append(endereco.getComplemento())
+          .append("\nData de fundação: ").append(DataFundacao.toString());
+
+        // Adicionando detalhes dos produtos
+        sb.append("\nProdutos:\n");
+        for (Produto produto : estoqueProdutos) {
+            if (produto != null) {
+                sb.append(produto.toString()).append("\n");
+            } else {
+                sb.append("Produto não inserido\n");
+            }
+        }
+
+        return sb.toString();
     }
 }
