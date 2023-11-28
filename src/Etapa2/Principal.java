@@ -6,6 +6,7 @@ public class Principal {
     public static void main(String[] args) throws Exception {
         var Loop = true;
         while (Loop == true) {
+            System.out.println("======Menu======");
             System.out.println("(1)cria uma loja\n(2)cria um produto\n(3)sair");
             var escolha = Teclado.leInt("Digite o número correspondente a sua escolha: ");
             if (escolha == 1) {
